@@ -1,6 +1,5 @@
-package lovely.family.android.ui.theme
+package lovely.family.android.Components.Theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

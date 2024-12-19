@@ -1,4 +1,4 @@
-package lovely.family.android.ui.theme
+package lovely.family.android.Components.Theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
