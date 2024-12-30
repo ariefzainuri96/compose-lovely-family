@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -35,7 +36,8 @@ fun CustomTextField(
     String? = null, maxLines: Int? = null, minLines: Int? = null, onValueChange: (String) -> Unit,
     singleLine: Boolean = true, enable: Boolean = true, backgroundColor: Color? =
         null, error: String? = null, visualTransformation: VisualTransformation =
-        VisualTransformation.None
+        VisualTransformation.None,
+    onDone: (() -> Unit)? = null
 ) {
     Column {
         if (label != null) {
@@ -77,6 +79,7 @@ fun CustomTextField(
                 imeAction = imeAction ?: ImeAction.Done,
                 keyboardType = keyboardType ?: KeyboardType.Text
             ),
+            keyboardActions = KeyboardActions(onDone = { onDone?.invoke() }),
             singleLine = singleLine,
             enabled = enable,
             shape = RoundedCornerShape(4.dp),

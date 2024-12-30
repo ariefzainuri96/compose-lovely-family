@@ -19,6 +19,15 @@ val SfPro = FontFamily(
     Font(R.font.sf_pro_900, FontWeight.Black),
 )
 
+val ChickenPie = FontFamily(
+    Font(R.font.chicken_pie),
+)
+
+val ChickenPie400 = TextStyle(
+    fontFamily = ChickenPie,
+    color = Color.Black
+)
+
 val SfPro300 = TextStyle(
     fontFamily = SfPro,
     fontWeight = FontWeight.Companion.Light,
